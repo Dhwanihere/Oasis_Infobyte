@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="main">
+			<form>
+				<div>
+					<input type="text" class="text" id="textbox" style="width: 97%; text-align: right;">
+				</div>
+
+				<div>
+					<input onclick="display(this)" type="button" class="colourIt" value="(" />
+					<input onclick="display(this)" type="button" class="colourIt" value=")" />
+					<input onclick="calculate()" type="button" class="colourIt" value="ans" />
+					<input onclick="deleteIt()" type="button" class="colourIt" value="del" />
+					<input onclick="clr()" type="button" class="colourIt" value="clear" />
+				</div>
+
+				<div>
+					<input onclick="display(this)" type="button" value="7" />
+					<input onclick="display(this)" type="button" value="8" />
+					<input onclick="display(this)" type="button" value="9" />
+					<input onclick="display(this)" type="button" class="colourIt" value="%" />
+					<input onclick="power()" type="button" class="colourIt"  value="^" />
+				</div>
+
+				<div>
+					<input onclick="display(this)" type="button" value="4" />
+					<input onclick="display(this)" type="button" value="5" />
+					<input onclick="display(this)" type="button" value="6" />
+					<input onclick="display(this)" type="button" class="colourIt" value="*" />
+					<input onclick="display(this)" type="button" class="colourIt" value="/" />
+				</div>
+
+				<div>
+					<input onclick="display(this)" type="button" value="1" />
+					<input onclick="display(this)" type="button" value="2" />
+					<input onclick="display(this)" type="button" value="3" />
+					<input onclick="display(this)" type="button" class="colourIt" value="+" />
+					<input onclick="display(this)" type="button" class="colourIt" value="-" />
+				</div>
+
+				<div>
+					<input onclick="display(this)" type="button" value="00" />
+					<input onclick="display(this)" type="button" value="0" />
+					<input onclick="display(this)" type="button" class="colourIt" value="." />
+					<input onclick="calculate()" type="button" class="en" value="ENTER" />
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		function display(n) {
+			t = document.getElementById('textbox');
+			t.value += n.value;
+		}
+		function calculate() {
+			t = document.getElementById('textbox')
+			ans = eval(t.value);
+			t.value = ans;
+		}
+		function clr() {
+			t = document.getElementById('textbox')
+			t.value = "";
+		}
+		function deleteIt() {
+			t = document.getElementById('textbox')
+			t.value = t.value.slice(0, -1);
+		}
+		function power() {
+			t = document.getElementById('textbox')
+			t.value += "**";
+		}
+	</script>
+
+</body>
+</html>
