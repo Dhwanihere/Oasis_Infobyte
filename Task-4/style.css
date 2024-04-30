@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow: hidden;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('bg.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.wrapper{
+    width: 380px;
+    height: 81vh;
+    padding: 40px 30px 50px 30px;
+    background: white;
+    text-align: center;
+    float: left;
+}
+
+header{
+    font-size: 30px;
+    font-weight: 500;
+    border-bottom: 7px solid purple;
+    border-radius: 5px;
+    width: 100px;
+}
+
+.wrapper form{
+    margin: 40px 0;
+}
+
+form .field {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+form .field.shake {
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100%{
+        margin-left: 0;
+    }
+    20%, 80%{
+        margin-left: -12px;
+    }
+    40%, 60%{
+        margin-left: 12px;
+    }
+}
+
+form .field .input-area{
+    position: relative;
+}
+
+form input{
+    height: 50px;
+    width: 100%;
+    font-size: 18px;
+    padding: 0 35px;
+    border-radius: 5px;
+    border: 1px solid rgb(100, 97, 97);
+    outline: none;
+}
+
+form .field.error input{
+    border-color: red;
+}
+
+form .field i{
+    position: absolute;
+    top: 35%;
+    font-size: 17px;
+    transform: translateY(-50%, -50%);
+    pointer-events: none;
+}
+
+form .field .icon{
+    left: 15px;
+}
+
+form .field .err-icon{
+    right: 15px;
+    color: red;
+}
+
+form .field .error-txt{
+    margin-top: 7px;
+    color: red;
+    text-align: left;
+}
+
+form .field .error{
+    display: none;
+}
+
+form .field.error .error{
+    display: block;
+}
+
+form .pass-link{
+    text-align: left;
+    margin-top: -10px;
+}
+
+.wrapper a{
+    text-decoration: none;
+}
+
+.wrapper a:hover{
+    text-decoration: underline;
+}
+
+form input[type="submit"]{
+    margin-top: 30px;
+    border: none;
+    background-color: plum;
+    cursor: pointer;
+    transition: background 0.5s ease;
+}
+
+input[type="submit"]:hover{
+    background-color: rebeccapurple;
+}
+
+
+.signup-link{
+    height: 7vh;
+    margin-top: -30px;
+    border: none;
+    border-radius: 5px;
+    background-color: plum;
+    cursor: pointer;
+    transition: background 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signup-link a {
+   text-decoration: none;
+    color: black;
+}
+
+.signup-link:hover{
+    background-color: rebeccapurple;
+}
+  
+.sidebar{
+    height: 81vh;
+    width: 35%;
+    float: left;
+    background-image: url('login.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.main{
+    height: 91vh;
+    width: 70%;
+    margin-top: 70px;
+    animation: slidein 2s forwards;
+}
+
+@keyframes slidein {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(15%);
+    }
+}
+
+.sidebar2{
+    height: 91vh;
+    width: 35%;
+    float: left;
+    background-image: url('singin.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main2{
+    height: 81vh;
+    width: 70%;
+    animation: slidein2 2s forwards;
+}
+
+@keyframes slidein2 {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(20%);
+    }
+}
